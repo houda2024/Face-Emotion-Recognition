@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+
+<div class="container mt-5">
+  <h2  class="display-3" style="font-size: 2.5rem; font-weight: bold ; line-height: 1.2; margin-bottom: 20px; font-style: italic ;">Select Image</h2>
+  <form name='frm' method='POST' action="{{url_for('predict')}}" enctype='multipart/form-data'>
+    
+    <div class="form-group">
+
+      	<div class="custom-file my-3">
+    		<input type="file" name="select_file">
+		</div>
+
+    </div>
+    
+    <input type="submit" name="btn" class="btn btn-primary" style="font-size: 1rem; padding: 10px 20px; border-radius: 5px; background-color: #032950; color: #fff; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#093c72';" onmouseout="this.style.backgroundColor='#043263';">
+
+  </form>
+</div>
+
+
+{%endblock%}
